@@ -1,0 +1,41 @@
+<div id="hsdContentToAdd">
+    <div id="postValue">
+        ~[SetPostValue:ifDisplay_prefix=<tr><td colspan=2 class="feedback-alert">]
+        ~[SetPostValue:ifDisplay_suffix=</td></tr>]
+        ~[SetPostValue:serviceName=PS Teacher Portal]
+        ~[brij_render:admin-commonaccess-pck;:notifyLockedAccount]
+    </div>
+    <table id="emgergencyContent">
+            <tr >
+                <td class="bold">Emergency Contact Name</td>
+                <td><input type="text" name="[05]emergency_contact_name" value="" size="30"></td>
+            </tr>
+            <tr >
+                <td class="bold">Emergency Contact Number</td>
+                <td><input type="text" name="[05]emergency_contact_number" value="" size="15"></td>
+            </tr>
+    </table>
+</div>
+<script>
+    $j(document).ready(function(){
+        var removeRow = function(id){
+            $j(id).closest('tr').remove();
+        }
+        // Remove StatePrId
+        removeRow('input[name^=UF-005089]')
+        // Remove Homeroom
+        removeRow('input[name^=UF-005011')
+        // Remove Lunch ID
+        removeRow('input[name^=UF-005028]')
+        // Remove SSN
+        removeRow('input[name^=UF-005030]')
+
+        $j('#infoTable').addClass('fourDTable');
+        $j('colgroup').after($j('#hsdContentToAdd').html())
+        $j('table').addClass('linkDescList')
+        $j('tr').each(function(){$j('tr').removeClass('evenRow').removeClass('oddRow')});
+        
+
+        $j('input[name^=UF-005032]').closest('td').prev().html('Cell Phone #');
+    })
+</script>

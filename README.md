@@ -14,4 +14,9 @@
 ### Version 0.1.1 - Future Release
     Working specifically with the edit.hsd_custom.content.footer.txt file
 
+#### Version 0.1.1.01 - Future Release
+    Added contentToAdd div
+    Added script to move contentToAdd
+    Added script to remove even/odd row class
+    Added sscript to add linkDescList class
     
