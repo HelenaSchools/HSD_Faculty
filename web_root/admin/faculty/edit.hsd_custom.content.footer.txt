@@ -6,6 +6,7 @@
         ~[brij_render:admin-commonaccess-pck;:notifyLockedAccount]
     </div>
     <table id="emergencyContent">
+        <tbody>
             <tr >
                 <td class="bold">Emergency Contact Name</td>
                 <td><input type="text" name="[05]emergency_contact_name" value="" size="30"></td>
@@ -14,6 +15,7 @@
                 <td class="bold">Emergency Contact Number</td>
                 <td><input type="text" name="[05]emergency_contact_number" value="" size="15"></td>
             </tr>
+        </tbody>
     </table>
 </div>
 <script>
@@ -32,7 +34,7 @@
 
         $j('#infoTable').addClass('fourDTable');
         $j('colgroup').after($j('#hsdContentToAdd div#postValue').html())
-        $j('input[name^=UF-005033').closest('tr').after($j('#hsdContentToAdd table#emergencyContent').html());
+        $j('input[name^=UF-005033').closest('tr').after($j('#hsdContentToAdd table#emergencyContent tbody').html());
         $j('table').addClass('linkDescList')
         $j('tr').each(function(){$j('tr').removeClass('evenRow').removeClass('oddRow')});
         
