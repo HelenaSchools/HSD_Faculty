@@ -19,4 +19,6 @@
     Added script to move contentToAdd
     Added script to remove even/odd row class
     Added sscript to add linkDescList class
-    
+
+#### Version 0.1.1.02 - Future Release
+    Updated script to put emegency content in proper area

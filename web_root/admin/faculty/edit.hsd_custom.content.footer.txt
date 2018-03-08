@@ -5,7 +5,7 @@
         ~[SetPostValue:serviceName=PS Teacher Portal]
         ~[brij_render:admin-commonaccess-pck;:notifyLockedAccount]
     </div>
-    <table id="emgergencyContent">
+    <table id="emergencyContent">
             <tr >
                 <td class="bold">Emergency Contact Name</td>
                 <td><input type="text" name="[05]emergency_contact_name" value="" size="30"></td>
@@ -31,7 +31,8 @@
         removeRow('input[name^=UF-005030]')
 
         $j('#infoTable').addClass('fourDTable');
-        $j('colgroup').after($j('#hsdContentToAdd').html())
+        $j('colgroup').after($j('#hsdContentToAdd div#postValue').html())
+        $j('input[name^=UF-005033').closest('tr').after($j('#hsdContentToAdd table#emergencyContent').html());
         $j('table').addClass('linkDescList')
         $j('tr').each(function(){$j('tr').removeClass('evenRow').removeClass('oddRow')});
         
