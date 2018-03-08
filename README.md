@@ -11,3 +11,7 @@
     Creates loginHist.html page with no data.
     Creates more2.hsd_custom.content.leftnav.txt with no data.
 
+### Version 0.1.1 - Future Release
+    Working specifically with the edit.hsd_custom.content.footer.txt file
+
+    
