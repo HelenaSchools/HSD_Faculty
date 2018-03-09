@@ -1,4 +1,4 @@
-<div id="hsdContentToAdd">
+<div id="hsdContentToAdd" >
     <div id="postValue">
         ~[SetPostValue:ifDisplay_prefix=<tr><td colspan=2 class="feedback-alert">]
         ~[SetPostValue:ifDisplay_suffix=</td></tr>]
@@ -31,7 +31,8 @@
         removeRow('input[name^=UF-005028]')
         // Remove SSN
         removeRow('input[name^=UF-005030]')
-
+        
+        $j('#hsdContentToAdd').hide();
         $j('#infoTable').addClass('fourDTable');
         $j('colgroup').after($j('#hsdContentToAdd div#postValue').html())
         $j('input[name^=UF-005033').closest('tr').after($j('#hsdContentToAdd table#emergencyContent tbody').html());
