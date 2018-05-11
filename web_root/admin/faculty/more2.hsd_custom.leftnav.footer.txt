@@ -1,0 +1,6 @@
+<div id="hsdContent">
+    <li id="loginHist" href="loginhist.html?frn=~(frn)">Login History</li>
+</div>
+<script>
+   $j('#nav-main-frame ul a:contains("Security Settings")').closest('li').after($j('#loginHist')) 
+</script>
