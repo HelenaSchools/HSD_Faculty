@@ -1,25 +1,26 @@
 <div id="hsdContentToAdd" >
     <div id="postValue">
-        ~[SetPostValue:ifDisplay_prefix=<tr><td colspan=2 class="feedback-alert">]
-        ~[SetPostValue:ifDisplay_suffix=</td></tr>]
-        ~[SetPostValue:serviceName=PS Teacher Portal]
-        ~[brij_render:admin-commonaccess-pck;:notifyLockedAccount]
+        
     </div>
+    <!--
     <table id="emergencyContent">
         <tbody>
-            
-            <tr >
-                <td class="bold">Emergency Contact Name</td>
-                <td><input type="text" name="[05]emergency_contact_name" value="" size="30"></td>
-            </tr>
-            <tr >
-                <td class="bold">Emergency Contact Number</td>
-                <td><input type="text" name="[05]emergency_contact_number">
-                    <p id="emergencyContactNumber_error" class="error-message" style="display: none;"></p>
-                </td>
-            </tr>
+            <form method="POST">
+                
+                <tr>
+                    <td class="bold">Emergency Contact Name</td>
+                    <td><input type="text" name="[05]emergency_contact_name" value="" size="30"></td>
+                </tr>
+                <tr >
+                    <td class="bold">Emergency Contact Number</td>
+                    <td><input type="text" name="[05]emergency_contact_number">
+                        <p id="emergencyContactNumber_error" class="error-message" style="display: none;"></p>
+                    </td>
+                </tr>
+            </form>
         </tbody>
     </table>
+    -->
 </div>
 <script>
     $j(document).ready(function(){
@@ -38,7 +39,8 @@
         $j('#hsdContentToAdd').hide();
         $j('#infoTable').addClass('fourDTable');
         $j('colgroup').after($j('#hsdContentToAdd div#postValue').html())
-        $j('input[name^=UF-005033').closest('tr').before($j('#hsdContentToAdd table#emergencyContent tbody').html());
+        // var contentToAdd=$j('#hsdContentToAdd table#emergencyContent tbody').html();
+        //$j('input[name^=UF-005033').closest('tr').before(contentToAdd);
         $j('table').addClass('linkDescList')
         $j('tr').each(function(){$j('tr').removeClass('evenRow').removeClass('oddRow')});
         

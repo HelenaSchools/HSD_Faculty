@@ -2,8 +2,8 @@
 <psExtension xmlns="http://www.powerschool.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://powerschool.com psextension.xsd">
     <extensionname>U_Users_Extension</extensionname>
     <extendedTable coreTable="Users" dbTableName="U_HSD_USERS" childName="U_HSD_USERS" comment="">
-        <field name="emergency_contact_number" type="String" length="20" alternateKey="users_dcid" alternateCoreTable="teachers"/>
-        <field name="emergency_contact_name" type="String" length="4000" alternateKey="users_dcid" alternateCoreTable="teachers"/>
-        <field name="cell_phone" type="String" length="20" alternateKey="users_dcid" alternateCoreTable="teachers"/>
+        <field name="emergency_contact_number" type="String" length="20" alternateKey="users_dcid" alternateCoreTable="users"/>
+        <field name="emergency_contact_name" type="String" length="4000" alternateKey="users_dcid" alternateCoreTable="users"/>
+        <field name="cell_phone" type="String" length="20" alternateKey="users_dcid" alternateCoreTable="users"/>
     </extendedTable>
 </psExtension>
