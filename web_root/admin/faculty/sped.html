@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<!-- start right frame -->
+<head>
+<title>Login History - ~(lastfirst) &nbsp; ~(teachernumber)</title>
+~[wc:commonscripts]
+<link href="/images/css/screen.css" rel="stylesheet" media="screen">
+<link href="/images/css/print.css" rel="stylesheet" media="print">
+</head>
+
+<body>
+
+~[wc:admin_header_frame_css]<!-- breadcrumb start --><a href="/admin/home.html" target="_top">~[text:psx.html.admin_faculty.edit.start_page]</a> &gt; <a href="/admin/faculty/search.html" target="_top">~[text:psx.html.admin_faculty.edit.staff]</a> &gt; <a href="/admin/faculty/home.html?selectteacher=nosearch" target="_top">~[text:psx.html.admin_faculty.edit.select_a_staff_member]</a> &gt;Login History - ~(lastfirst) &nbsp; ~(teachernumber)<!-- breadcrumb end -->~[wc:admin_navigation_frame_css]
+
+<span class="account-photo">~[facultytitlephoto]</span>
+
+<!-- start of content and bounding box -->
+<h1>SPED User Settings - ~(lastfirst) &nbsp; ~(teachernumber)</h1>
+<div class="box-round">
+<p>
+
+	<table  border="" cellspacing="0" cellpadding="4" class="linkdesclist">  	  
+	  <tr>
+      <td class="bold">Related Service Provider</td>
+      <td class="bold"><input type="checkbox" value="" name="[05]related_service_provider"></td>
+    </tr>
+    <tr>
+      <td class="bold">Case Manager</td>
+      <td class="bold"><input type="checkbox" value="" name="[05]case_manager"></td>
+    </tr>
+	  <tr>
+      <td colspan="2" class="header"></td>
+    </tr>
+    <div ng-if="[05]related_service_provider">
+      <tr>
+        <td class="bold">Related Services Provided</td>
+        <td>
+          ~[tlist_sql;
+            select
+              dcid,
+              lastfirst
+            from students
+            where 
+          
+          ]
+        </td>
+      </tr>
+    </div>
+	</table> 
+<br>
+
+</td>
+<td width="25" background="/images/bond_box_right_edge.gif"><img src="/images/spacer.gif" width="25" height="1"></td>
+</tr>
+</table>
+<br>
+<!-- end of content of bounding box -->
+
+~[wc:admin_footer_frame_css]
+
+</body>
+</html><!-- end right frame -->
